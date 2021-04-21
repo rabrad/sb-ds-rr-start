@@ -1,18 +1,18 @@
-import React from "react";
+import React from "react"
 
-import { Avatar } from "./Avatar";
+import { Avatar } from "./Avatar"
 
 export default {
   title: "Design System/Avatar",
   component: Avatar,
-};
+}
 
-export const Standard = (args) => <Avatar {...args} />;
+export const Standard = (args) => <Avatar {...args} />
 Standard.args = {
   size: "large",
   username: "Tom Coleman",
   src: "https://avatars2.githubusercontent.com/u/132554",
-};
+}
 
 export const Sizes = (args) => (
   <div>
@@ -21,11 +21,11 @@ export const Sizes = (args) => (
     <Avatar {...args} size="small" />
     <Avatar {...args} size="tiny" />
   </div>
-);
+)
 Sizes.args = {
   username: "Tom Coleman",
   src: "https://avatars2.githubusercontent.com/u/132554",
-};
+}
 
 export const Initials = (args) => (
   <div>
@@ -34,19 +34,19 @@ export const Initials = (args) => (
     <Avatar username="Kyle Suss" />
     <Avatar username="Michael Shilman" />
   </div>
-);
+)
 
 export const Loading = (args) => (
-    <div>
-      <Avatar {...args} size="large" />
-      <Avatar {...args} size="medium" />
-      <Avatar {...args} size="small" />
-      <Avatar {...args} size="tiny" />
-    </div>
-  );
-  Loading.args = {
-    loading: true,
-  };
+  <div>
+    <Avatar {...args} size="large" />
+    <Avatar {...args} size="medium" />
+    <Avatar {...args} size="small" />
+    <Avatar {...args} size="tiny" />
+  </div>
+)
+Loading.args = {
+  loading: true,
+}
 
 export const Large = (args) => (
   <div>
@@ -58,4 +58,14 @@ export const Large = (args) => (
       src="https://avatars2.githubusercontent.com/u/132554"
     />
   </div>
-);
+)
+
+const Template = (args) => <Avatar {...args} />
+
+export const Controls = Template.bind({})
+Controls.args = {
+  loading: false,
+  size: "tiny",
+  username: "Dominic Nguyen",
+  src: "https://avatars2.githubusercontent.com/u/263385",
+}
